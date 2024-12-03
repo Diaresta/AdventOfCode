@@ -13,7 +13,7 @@ let distance;
 let isLevelSafe = (input) => {
   input.forEach((i) => {
     level = i.split(/\s+/).map(Number);
-    isDecreasing = level[1] - level[0] < 0;
+    isDecreasing = level[1] < level[0];
 
     for (let i = 0; i < level.length - 1; i++) {
       distance = level[i + 1] - level[i];
