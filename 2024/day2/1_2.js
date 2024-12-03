@@ -10,7 +10,7 @@ let levels = LIST_LINES.map((i) => i.split(/\s+/).map(Number));
 let isDecreasing;
 let distance;
 
-const isLevelSafe = () => {
+let isLevelSafe = () => {
   levels.forEach((level) => {
     for (let i = 0; i < level.length; i++) {
       let removeIndex = [...level.slice(0, i), ...level.slice(i + 1)];
